@@ -1,19 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void kopi(int prosedur){
-    
-    cout << (prosedur-4) << ". siapkan gelas,kopi,air panas dan sendok"<<endl;
-    cout << (prosedur-3) << ". buka kopi dan tuangkan ke dalam gelas"<<endl;
-    cout << (prosedur-2) << ". tuangkan air panas ke gelas berisi bubuk kopi"<<endl;
-    cout << (prosedur-1) << ". lalu aduk menggunakan sendok"<<endl;
-    cout << (prosedur) << ". kopi siap diminum" << endl;
-    
+void kopi(int procedur, string in){
+    for(int i = 0; i < procedur; i++){
+    	cout << (i+1) << " ";
+    	cin >> in;
+	}
 }
 
 int main(){
-    int step_by_step = 5;
+    int step;
+    string input;
+    
     cout << "=====||Prosedur membuat kopi||====="<<endl<<endl;
-    cout << "ada 5 cara membuat kopi"<<endl<<endl;
-    kopi(step_by_step);
+    cout << "Ada berapa step by step membuat kopi ? ";
+    cin >> step;
+    cout << "nmasukan step by stepnya : "<< endl;
+    
+	kopi(step,input);
 }
