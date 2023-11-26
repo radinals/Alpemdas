@@ -10,6 +10,8 @@ void kopi(int step){
     cin >> gula;
     if(gula < 1){
         cout << "Kopi Tidak Manis"<<endl;
+    }else if(gula >= 1 && gula <= 3){
+        cout << "manis kopi sudah pas"<<endl;
     }else if(gula > 3){
         cout << "gula terlalu manis"<<endl;
     }else{
