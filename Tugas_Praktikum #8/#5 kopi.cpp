@@ -13,7 +13,7 @@ void kopi(int step){
     }else if(gula >= 1 && gula <= 3){
         cout << "manis kopi sudah pas"<<endl;
     }else if(gula > 3){
-        cout << "gula terlalu manis"<<endl;
+        cout << "kopi terlalu manis"<<endl;
     }else{
         return;
     }
