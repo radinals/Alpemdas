@@ -1,26 +1,31 @@
+#include <ctime>
 #include <iostream>
 using namespace std;
 
-void kondisi(int ucapan){
-    if(ucapan < 10){
-        cout << "Selamat Pagi";
-    }else if(ucapan < 16){
-        cout << "Selamat Siang";
-    }else if(ucapan < 18){
-        cout << "Selamat sore";
-    }else if(ucapan > 18){
-        cout << "Selamat Malam";
-    }else{
-        return;
-    }
+int
+dapatkan_jam()
+{
+	time_t t = time(nullptr);
+	tm *now = localtime(&t);
+	return now->tm_hour;
 }
 
-int main(){
-    int input_ucapan;
+void
+ucapan_salam(int jam)
+{
+	if (jam > 0 && jam < 12)
+		cout << "Selamat Pagi" << endl;
+	else if (jam >= 12 && jam < 15)
+		cout << "Selamat Siang" << endl;
+	else if (jam >= 15 && jam < 18)
+		cout << "Selamat Sore" << endl;
 
-    cout << "===||UCAPAN SESUAI DENGAN WAKTU||==" << endl << endl;
-    cout << "Sekarang Jam Berapa ? ";
-    cin >> input_ucapan;
+	else
+		cout << "Selamat Malam" << endl;
+}
 
-    kondisi(input_ucapan);
+int main()
+{
+	ucapan_salam(dapatkan_jam());
+	return 0;
 }
