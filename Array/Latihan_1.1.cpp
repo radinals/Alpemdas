@@ -18,5 +18,5 @@ int main(){
     for(int i = 0; i < max_size; i++){
         sum += array[i]; 
     }
-    cout << "maka penjumlahan kesuluruhan nilai arraynya adalah : " << sum;
+    cout << "maka kesuluruhan penjumlahan nilai arraynya adalah : " << sum;
 }
