@@ -1,21 +1,31 @@
 #include <iostream>
 using namespace std;
 
-void kopi(int procedur, string in){
-    for(int i = 0; i < procedur; i++){
-    	cout << (i+1) << " ";
-    	cin >> in;
-	}
+void kopi(int step){
+    int gula;
+    
+    cout << "1. Siapkan kopi sachet, air panas, gula, sendok, dan gelas. " << endl;
+    cout << "2. Masukan kopi sachet ke gelas"<< endl;
+    cout << "3. Masukan gula ke gelas berapa sendok ? ";
+    cin >> gula;
+    if(gula < 1){
+        cout << "Kopi Tidak Manis"<<endl;
+    }else if(gula >= 1 && gula <= 3){
+        cout << "manis kopi sudah pas"<<endl;
+    }else if(gula > 3){
+        cout << "kopi terlalu manis"<<endl;
+    }else{
+        return;
+    }
+    cout << "3. Masukan air panas secukupnya"<<endl;
+    cout << "4. Aduk gelas yang sudah terisi menggunakan sendok"<<endl;
+    cout << "5. kopi siap disajikan"; 
 }
 
 int main(){
-    int step;
-    string input;
+    int step = 6;
     
-    cout << "=====||Prosedur membuat kopi||====="<<endl<<endl;
-    cout << "Ada berapa step by step membuat kopi ? ";
-    cin >> step;
-    cout << "nmasukan step by stepnya : "<< endl;
+    cout << "=====||Prosedur membuat kopi sachet||====="<<endl<<endl;
     
-	kopi(step,input);
+	kopi(step);
 }
